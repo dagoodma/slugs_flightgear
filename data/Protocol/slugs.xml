@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+ <comment>
+  <![CDATA[
+    This is the protocol definition for the slugs autopilot to flightgear.
+
+    Usage:
+    # fgfs --generic=socket,in,<hz>,<host>,56832,udp,slugs
+
+    Check data with:
+    #  netcat -u -l -p 56832
+  ]]>
+ </comment>
+
+ <generic>
+
+  <input>
+   <line_separator>newline</line_separator>
+   <var_separator>tab</var_separator>
+   
+<comment>
+  <![CDATA[
+	Waypoints should be given as follows:
+	
+		lon,lat@alt
+		
+	where lon and lat are in decimal degrees, and alt is in meters.
+	
+	ie.
+		-122.2421,29.21481@700
+		
+	Waypoint commands can also be specified:
+	
+		@CLEAR - clears all waypoints (be sure to use @DELETE0 to remove the airport)
+		@DELETE# - deletes a waypoint with the given index #
+    ]]>
+ </comment>
+   <chunk>
+    <name>waypoint</name>
+    <type>string</type>
+    <node>/autopilot/route-manager/input</node>
+   </chunk>
+   <comment>
+  <![CDATA[
+	Whether to draw waypoints. Waypoints are read from the router-manager list. Values can be:
+		waypoint - draws waypoints and legs between
+		aimpoint - draws aim point beads
+		initialpoint - draws an initial point
+    ]]>
+ </comment>
+   <chunk>
+    <name>update_waypoints</name>
+    <type>string</type>
+    <node>/autopilot/route-manager/update_waypoints</node>
+   </chunk>
+   
+  <comment>
+  <![CDATA[
+	The L2+ vector will be drawn at the given coordinates with the given length,
+	if draw_l2_vector is set to true (1).
+    ]]>
+ </comment>
+   <chunk>
+    <name>l2_vector_lat</name>
+    <type>float</type>
+    <node>/autopilot/l2/lat</node>
+   </chunk>
+   <chunk>
+    <name>l2_vector_lon</name>
+    <type>float</type>
+    <node>/autopilot/l2/lon</node>
+   </chunk>
+   <chunk>
+    <name>draw_l2_vector</name>
+    <type>bool</type>
+    <node>/autopilot/l2/draw_l2</node>
+   </chunk>
+
+  </input>
+
+ </generic>
+
+</PropertyList>
