@@ -12,13 +12,13 @@ as red beads, and legs between waypoints are plotted as yellow beads.
 ### Installation ###
 
 To install this addon, copy the ```data``` folder into your FlightGear
-directory (FGROOT, typically ```C:\Program Files\FlightGear```).
+directory (*FGROOT*, typically ```C:\Program Files\FlightGear```).
 
 The above step will add the bead models to ```data\Models\Geometry```, 
 add the backend script to ```data\Nasal```, and add the UDP protocol
 to ```data\Protocol```. You could also copy the backend script to your
 home directory, but the models and protocol will need to be located
-under FGROOT.
+under *FGROOT*.
 
 
 ### License ###
