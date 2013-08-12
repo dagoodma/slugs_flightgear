@@ -3,7 +3,7 @@
 #
 	
 var WP_MARKER = "Models/Geometry/bead_wp.xml";	# path bead
-var MARKER = "Models/Geometry/bead.xml";	# wp bead			
+var MARKER = "Models/Geometry/bead_leg.xml";	# wp bead			
 #var AP_MARKER = "Models/Geometry/bead_aim.xml"; # aim point bead
 var IP_MARKER = "Models/Geometry/bead_aim.xml"; # initial point bead
 var L2_MARKER = "Models/Geometry/line_l2.xml"; # L2+ marker
