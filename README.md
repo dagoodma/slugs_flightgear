@@ -23,8 +23,8 @@ under FGROOT.
 
 ### License ###
 
-The SLUGS Waypoint Visualizer project is protected under either LGPL or GPLv3+.
-See the *COPYING* file for more info.
+The SLUGS Waypoint Visualizer project is protected under GPLv2.
+See the *LICENSE* file for more info.
 
 
 ### Credits ###
