@@ -2,7 +2,7 @@
 
 *   Website: http://byron.soe.ucsc.edu/wiki/autopilot/flightgear
 *   Source: https://github.com/dagoodma/slugs_flightgear
-*   Mailing list: none yet
+*   Forums: http://www.flightgear.org/forums/viewtopic.php?f=18&t=20502
 
 The SLUGS Waypoint Visualizer is an addon for FlightGear that allows you
 to plot waypoints form the route manager. Currently, waypoints are shown
