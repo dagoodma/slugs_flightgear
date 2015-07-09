@@ -266,11 +266,12 @@ var fdm_init_listener = _setlistener("/sim/signals/fdm-initialized", func {
 	
 	setlistener("/autopilot/route-manager/update_waypoints", func(n) {
 		if (n.getValue() and n.getValue() != "") {
+            # TODO add support for drawing aimpoint
 			#if (n.getValue() == "aimpoint") {
 			#	print("Drawing aim point.");
 			#	draw_aim_point();
 			#}
-			else if (n.getValue() == "initialpoint") {
+			if (n.getValue() == "initialpoint") {
 				print("Drawing inital point.");
 				draw_initial_point();
 			}
